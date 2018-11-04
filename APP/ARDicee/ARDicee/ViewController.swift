@@ -209,16 +209,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, UITextFieldDelegate {
         }
     }
     func printData(json: JSON) {
-        let price = json["results"].string
         
-//        print(price)
-//        print("-------")
-//        var i = 0
-//        while (price[i]!="t" && price[i+1]!="o") {
-//
-//            i = i+1
-//        }
-        //        let alert = UIAlertController(title: "FLIGHT PRICE", message: "The lowest price flight comes out to be: \(price)", preferredStyle: .alert)
-//        self.present(alert, animated: true)
+        if let price = json["results"][0]["fare"]["total_price"].string{
+            print(price)
+            let alert = UIAlertController(title: "FLIGHT PRICE", message: "The lowest price flight comes out to be: \(price)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+        else {
+            print("doesn't work")
+        }
+       
     }
 }
