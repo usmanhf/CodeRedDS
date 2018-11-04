@@ -218,6 +218,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, UITextFieldDelegate {
         }
         else {
             print("doesn't work")
+            let alert = UIAlertController(title: "DOES NOT EXIST", message: "Try again with valid info", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
        
     }
