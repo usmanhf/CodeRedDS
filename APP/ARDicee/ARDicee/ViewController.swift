@@ -24,7 +24,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, UITextFieldDelegate {
     
     
     let FLIGHT_URL = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search"
-    let APIKEY = "6Sy1fp88A6Q3AcAPx6CVqMIodX2ahhvd"
+    let APIKEY = ""
     
     @IBOutlet var sceneView: ARSCNView!
     
